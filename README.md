@@ -1,13 +1,11 @@
 # HOG_SVM
 This is our great MUS2 Project for a HOG SVM Doorknob detector </br>
 
+![Result_Gif](doku/Ergebnisse_Screenshots/demo.gif)
+
 ## How to get the trainings data: 
 - Download the Files: https://drive.google.com/drive/folders/1eQ5UWKaUYUpAuMhWf78MmCKgs6JhAncF?usp=sharing
 - Add the images to the File Structure provided below in the images-path
-
-
-
-
 
 
 
@@ -51,16 +49,11 @@ Complete Pipeline:
 
 </br>
 
-# Result
+## Result
 
 The following image shows a sample prediction based on the presented pipeline.
 To see the full results start the SVM Programm and load the sample videos. 
 
-### Output: 
-![Result_Gif](doku/Ergebnisse_Screenshots/demo.gif)
-<br><br>
-
-### Test Images: 
 ![Result](doku/Ergebnisse_Screenshots/perfect.png)
 ![Result2](doku/Ergebnisse_Screenshots/good_detection_overlap.png)
 ![Result2](doku/Ergebnisse_Screenshots/interesting.png)
