@@ -1,0 +1,17 @@
+\hypertarget{index_splitting_images}{}\section{splitting\+\_\+images}\label{index_splitting_images}
+1.) Resizes images and crops them into NxM images.~\newline
+ 2.) Overlap of cropped images is possible. Cropped images are manually reviewed and evaluated if dooor knob is in picture or not.~\newline
+ 3.) This evaluated cropped pictures are saved into to different folders\+:~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/positiv\char`\"{}~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/negativ\char`\"{} \hypertarget{index_HOG}{}\section{H\+OG}\label{index_HOG}
+1.) Pushes the positive and negative cropped images in acording image vectors.~\newline
+ 2.) Computes the H\+OG descriptor of positive and negative images an writes them in two C\+VS files\+:~\newline
+ \char`\"{}../\+Data/positiv\char`\"{}~\newline
+ \char`\"{}../\+Data/negativ\char`\"{}\hypertarget{index_SVM}{}\section{S\+VM}\label{index_SVM}
+1.) The main function opens the C\+SV files with the hog descriptors for cropped images, split up in two files\+: negative and positive detection.~\newline
+ 2.) The data from the csv files is rearranged in a way, the S\+VM function can compute it.~\newline
+ 3.) The svm is trained with the data from the csv files.~\newline
+ 4.) The support vector machine is tested with a test image and a test video.~\newline
+ 5.) Predicts door handle in the cropped image and draws a blue square over it.~\newline
+ 6.) Calculates a red rectangle from the minimum and maximum coordinates of the blue rectangles, which includes all recognized cropped images.~\newline
+ 7.) Red rectangle is the result of the S\+VM modell. 

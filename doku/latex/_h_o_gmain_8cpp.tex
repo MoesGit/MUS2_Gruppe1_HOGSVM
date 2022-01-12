@@ -1,0 +1,65 @@
+\hypertarget{_h_o_gmain_8cpp}{}\section{H\+O\+Gmain.\+cpp File Reference}
+\label{_h_o_gmain_8cpp}\index{H\+O\+Gmain.\+cpp@{H\+O\+Gmain.\+cpp}}
+{\ttfamily \#include $<$opencv2/core/ocl.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/utility.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgcodecs.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/videoio.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/objdetect.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_h_o_gmain_8cpp_a90b505efa8650b6b825212112f0b6f17}{create\+\_\+\+H\+O\+G\+\_\+\+C\+SV} (std\+::string name, size\+\_\+t count, std\+::vector$<$ cv\+::\+Mat $>$ images, cv\+::\+H\+O\+G\+Descriptor hog, cv\+::\+Size cell\+Size, int nbins, cv\+::\+Size block\+Size)
+\begin{DoxyCompactList}\small\item\em creates C\+VS file with all H\+OG descriptos of cropped images. \end{DoxyCompactList}\item 
+int \hyperlink{_h_o_gmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em pushes the positive and negative cropped images in acording image vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_h_o_gmain_8cpp_a90b505efa8650b6b825212112f0b6f17}\label{_h_o_gmain_8cpp_a90b505efa8650b6b825212112f0b6f17}} 
+\index{H\+O\+Gmain.\+cpp@{H\+O\+Gmain.\+cpp}!create\+\_\+\+H\+O\+G\+\_\+\+C\+SV@{create\+\_\+\+H\+O\+G\+\_\+\+C\+SV}}
+\index{create\+\_\+\+H\+O\+G\+\_\+\+C\+SV@{create\+\_\+\+H\+O\+G\+\_\+\+C\+SV}!H\+O\+Gmain.\+cpp@{H\+O\+Gmain.\+cpp}}
+\subsubsection{\texorpdfstring{create\+\_\+\+H\+O\+G\+\_\+\+C\+S\+V()}{create\_HOG\_CSV()}}
+{\footnotesize\ttfamily void create\+\_\+\+H\+O\+G\+\_\+\+C\+SV (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{size\+\_\+t}]{count,  }\item[{std\+::vector$<$ cv\+::\+Mat $>$}]{images,  }\item[{cv\+::\+H\+O\+G\+Descriptor}]{hog,  }\item[{cv\+::\+Size}]{cell\+Size,  }\item[{int}]{nbins,  }\item[{cv\+::\+Size}]{block\+Size }\end{DoxyParamCaption})}
+
+
+
+creates C\+VS file with all H\+OG descriptos of cropped images. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & file name of C\+VS \\
+\hline
+{\em count} & count amount of descriptors \\
+\hline
+{\em images} & vector of cropped images \\
+\hline
+{\em hog} & H\+OG \\
+\hline
+{\em cell\+Size} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_h_o_gmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_h_o_gmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{H\+O\+Gmain.\+cpp@{H\+O\+Gmain.\+cpp}!main@{main}}
+\index{main@{main}!H\+O\+Gmain.\+cpp@{H\+O\+Gmain.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pushes the positive and negative cropped images in acording image vectors. 
+
+Computes the H\+OG descriptor of positive and negative images an writes them in two C\+VS files\+:~\newline
+\char`\"{}../\+Data/positiv\char`\"{}~\newline
+\char`\"{}../\+Data/negative\char`\"{}~\newline
+~\newline
+ \href{https://stackoverflow.com/questions/55397301/how-to-detect-an-object-in-an-image-using-hog-descriptors}{\tt https\+://stackoverflow.\+com/questions/55397301/how-\/to-\/detect-\/an-\/object-\/in-\/an-\/image-\/using-\/hog-\/descriptors}~\newline
+ \href{https://stackoverflow.com/questions/31346132/how-to-get-all-images-in-folder-using-c}{\tt https\+://stackoverflow.\+com/questions/31346132/how-\/to-\/get-\/all-\/images-\/in-\/folder-\/using-\/c}~\newline

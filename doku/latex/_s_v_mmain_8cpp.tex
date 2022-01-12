@@ -1,0 +1,96 @@
+\hypertarget{_s_v_mmain_8cpp}{}\section{S\+V\+Mmain.\+cpp File Reference}
+\label{_s_v_mmain_8cpp}\index{S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}}
+{\ttfamily \#include $<$opencv2/ml.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/ocl.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/utility.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgcodecs.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/videoio.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/objdetect.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float $>$ \hyperlink{_s_v_mmain_8cpp_a416df9f11cd0c3ab56e3aaec8d48734c}{get\+\_\+\+H\+O\+G\+\_\+features} (cv\+::\+Mat image, cv\+::\+H\+O\+G\+Descriptor hog, cv\+::\+Size cell\+Size, int nbins, cv\+::\+Size block\+Size)
+\begin{DoxyCompactList}\small\item\em computes H\+OG features. \end{DoxyCompactList}\item 
+void \hyperlink{_s_v_mmain_8cpp_a11b574af35615a57f6c0beb0bc195d9b}{detect} (cv\+::\+Mat test\+\_\+image, cv\+::\+Ptr$<$ cv\+::ml\+::\+S\+VM $>$ svm, float resize\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Predicts door handle in the cropped image and draws a blue square over it. Calculates a red rectangle from the minimum and maximum coordinates of the blue rectangles, which includes all recognized cropped images. Red rectangle is the result of the S\+VM modell. \end{DoxyCompactList}\item 
+int \hyperlink{_s_v_mmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em the main function opens the C\+SV files with the hog descriptors for cropped images, split up in two files\+: negative and positive detection.~\newline
+ \href{https://stackoverflow.com/questions/18777267/c-program-for-reading-csv-writing-into-array-then-manipulating-and-printing-i}{\tt https\+://stackoverflow.\+com/questions/18777267/c-\/program-\/for-\/reading-\/csv-\/writing-\/into-\/array-\/then-\/manipulating-\/and-\/printing-\/i}~\newline
+~\newline
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_s_v_mmain_8cpp_a11b574af35615a57f6c0beb0bc195d9b}\label{_s_v_mmain_8cpp_a11b574af35615a57f6c0beb0bc195d9b}} 
+\index{S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}!detect@{detect}}
+\index{detect@{detect}!S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}}
+\subsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily void detect (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{test\+\_\+image,  }\item[{cv\+::\+Ptr$<$ cv\+::ml\+::\+S\+VM $>$}]{svm,  }\item[{float}]{resize\+\_\+factor }\end{DoxyParamCaption})}
+
+
+
+Predicts door handle in the cropped image and draws a blue square over it. Calculates a red rectangle from the minimum and maximum coordinates of the blue rectangles, which includes all recognized cropped images. Red rectangle is the result of the S\+VM modell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+\_\+image} & image the S\+VM ist tested on. \\
+\hline
+{\em svm} & S\+VM \\
+\hline
+{\em resize\+\_\+factor} & factor to resize image (same as \hyperlink{splitting__images_8cpp}{splitting\+\_\+images.\+cpp}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_v_mmain_8cpp_a416df9f11cd0c3ab56e3aaec8d48734c}\label{_s_v_mmain_8cpp_a416df9f11cd0c3ab56e3aaec8d48734c}} 
+\index{S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}!get\+\_\+\+H\+O\+G\+\_\+features@{get\+\_\+\+H\+O\+G\+\_\+features}}
+\index{get\+\_\+\+H\+O\+G\+\_\+features@{get\+\_\+\+H\+O\+G\+\_\+features}!S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+\+H\+O\+G\+\_\+features()}{get\_HOG\_features()}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ get\+\_\+\+H\+O\+G\+\_\+features (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{image,  }\item[{cv\+::\+H\+O\+G\+Descriptor}]{hog,  }\item[{cv\+::\+Size}]{cell\+Size,  }\item[{int}]{nbins,  }\item[{cv\+::\+Size}]{block\+Size }\end{DoxyParamCaption})}
+
+
+
+computes H\+OG features. 
+
+gets H\+OG descriptors from cropped image.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & input image. \\
+\hline
+{\em hog} & Descriptor \\
+\hline
+{\em cell\+Size} & size of cell \\
+\hline
+{\em nbins} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_v_mmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_s_v_mmain_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}!main@{main}}
+\index{main@{main}!S\+V\+Mmain.\+cpp@{S\+V\+Mmain.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+the main function opens the C\+SV files with the hog descriptors for cropped images, split up in two files\+: negative and positive detection.~\newline
+ \href{https://stackoverflow.com/questions/18777267/c-program-for-reading-csv-writing-into-array-then-manipulating-and-printing-i}{\tt https\+://stackoverflow.\+com/questions/18777267/c-\/program-\/for-\/reading-\/csv-\/writing-\/into-\/array-\/then-\/manipulating-\/and-\/printing-\/i}~\newline
+~\newline
+
+
+the data from the csv files is rearranged in a way, the S\+VM function can compute it.~\newline
+ \href{https://docs.opencv.org/4.5.3/d1/d73/tutorial_introduction_to_svm.html}{\tt https\+://docs.\+opencv.\+org/4.\+5.\+3/d1/d73/tutorial\+\_\+introduction\+\_\+to\+\_\+svm.\+html}~\newline
+ \href{https://github.com/opencv/opencv/blob/master/samples/cpp/tutorial_code/ml/introduction_to_svm/introduction_to_svm.cpp}{\tt https\+://github.\+com/opencv/opencv/blob/master/samples/cpp/tutorial\+\_\+code/ml/introduction\+\_\+to\+\_\+svm/introduction\+\_\+to\+\_\+svm.\+cpp}~\newline
+ \href{https://docs.opencv.org/4.5.3/d1/d2d/classcv_1_1ml_1_1SVM.html}{\tt https\+://docs.\+opencv.\+org/4.\+5.\+3/d1/d2d/classcv\+\_\+1\+\_\+1ml\+\_\+1\+\_\+1\+S\+V\+M.\+html}~\newline
+~\newline
+ the svm is trained with the data from the csv files.~\newline
+ \href{https://docs.opencv.org/4.5.3/db/d7d/classcv_1_1ml_1_1StatModel.html#af96a0e04f1677a835cc25263c7db3c0c}{\tt https\+://docs.\+opencv.\+org/4.\+5.\+3/db/d7d/classcv\+\_\+1\+\_\+1ml\+\_\+1\+\_\+1\+Stat\+Model.\+html\#af96a0e04f1677a835cc25263c7db3c0c}~\newline
+~\newline
+ the support vector machine is tested with a test image and a test video.~\newline

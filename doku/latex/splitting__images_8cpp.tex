@@ -1,0 +1,43 @@
+\hypertarget{splitting__images_8cpp}{}\section{splitting\+\_\+images.\+cpp File Reference}
+\label{splitting__images_8cpp}\index{splitting\+\_\+images.\+cpp@{splitting\+\_\+images.\+cpp}}
+{\ttfamily \#include $<$opencv2/core/ocl.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/utility.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgcodecs.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/videoio.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/highgui.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/objdetect.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{splitting__images_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Resizes images and crops them into NxM images.~\newline
+Overlap of cropped images is possible. Cropped images are manually reviewed and evaluated if dooor knob is in picture or not.~\newline
+This evaluated cropped pictures are saved into to different folders\+:~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/positiv\char`\"{}~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/negativ\char`\"{}~\newline
+. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{splitting__images_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{splitting__images_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{splitting\+\_\+images.\+cpp@{splitting\+\_\+images.\+cpp}!main@{main}}
+\index{main@{main}!splitting\+\_\+images.\+cpp@{splitting\+\_\+images.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resizes images and crops them into NxM images.~\newline
+Overlap of cropped images is possible. Cropped images are manually reviewed and evaluated if dooor knob is in picture or not.~\newline
+This evaluated cropped pictures are saved into to different folders\+:~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/positiv\char`\"{}~\newline
+ \char`\"{}../\+Data/images/split\+\_\+images/negativ\char`\"{}~\newline
+. 
+
